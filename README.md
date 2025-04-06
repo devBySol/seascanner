@@ -1,3 +1,5 @@
+# SeaScanner
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -7,60 +9,102 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About SeaScanner
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+SeaScanner is a web-based platform designed for users to discover and book exciting water-based activities across various locations worldwide. Users can search, filter, and book activities such as diving, snorkeling, boat tours, jet skiing, and surfing.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Search for Activities**: Easily search for various marine activities by title or description.
+- **Category Filter**: Filter activities by categories such as Diving, Snorkeling, Boat, Jet Ski, Surfing.
+- **Responsive Design**: Fully responsive UI that adapts seamlessly to mobile, tablet, and desktop devices.
+- **User Authentication**: Login and registration system to manage user accounts.
+- **Real-Time Updates**: Users can book and view activities in real-time.
 
-## Learning Laravel
+## Installation and Setup
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 1. Clone the Project
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Clone the project to your local machine:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+git clone https://github.com/devBySol/seascanner.git
+cd seascanner
+```
 
-## Laravel Sponsors
+### 2. Install Dependencies
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Install Laravel's PHP dependencies:
 
-### Premium Partners
+```bash
+composer install
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Install JavaScript dependencies:
+
+```bash
+npm install
+```
+
+### 3. Set Up the Environment
+
+Copy the .env.example file to .env and configure your environment settings (such as database and email).
+
+```bash
+cp .env.example .env
+```
+
+Modify the .env file with your database and other configuration values.
+
+### 4. Database Migrations and Seeding
+
+Run the database migrations to create the necessary tables:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+### 5. Serve the Application
+
+Run the development server:
+
+```bash
+php artisan serve
+```
+
+Visit http://localhost:8000 to view the application.
+
+## Testing
+
+This project comes with PHPUnit tests. To run the tests, use the following command:
+
+```bash
+php artisan test
+```
+
+Alternatively, you can use PHPUnit directly:
+
+```bash
+./vendor/bin/phpunit
+```
+
+## Technology Stack
+
+- **Laravel**: PHP framework for building modern web applications.
+- **Tailwind CSS**: Utility-first CSS framework.
+- **Vite**: A modern build tool that is optimized for speed.
+- **MySQL / SQLite**: The database used (SQLite is recommended for development).
+- **PHPUnit**: Testing framework for PHP applications.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Thank you for considering contributing to SeaScanner! You can find the contribution guide in the Laravel documentation.
 
 ## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+To ensure the Laravel community is welcoming for everyone, please review and abide by the Code of Conduct.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+SeaScanner is an open-source project licensed under the MIT license.
+
