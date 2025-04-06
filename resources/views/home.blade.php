@@ -3,6 +3,7 @@
 @section('content')
 
 @include('partials.hero')
+@include('partials.search')
 @include('partials.activities')
 @include('partials.banner')
 @include('partials.news')

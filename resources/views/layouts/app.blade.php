@@ -14,7 +14,7 @@
   <header class="bg-white shadow-sm">
     <div class="max-w-full mx-auto px-10 py-4 flex justify-between items-center">
       <div class="text-xl font-bold text-teal-600">
-        <a href="/">SeaScanner<a>
+        <a href="home">SeaScanner<a>
       </div>
       <nav class="hidden md:flex space-x-10 text-sm font-medium text-gray-700">
         <a href="#" class="hover:text-teal-500">Holiday Package</a>
