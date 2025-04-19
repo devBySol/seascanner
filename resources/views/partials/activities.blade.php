@@ -16,13 +16,14 @@
     <div class="p-4">
       <div class="flex justify-between items-center text-sm text-gray-600 mb-1">
         <span class="font-medium text-teal-600">{{ $activity->category->name ?? 'No Category' }}</span>
-        <span class="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded-full">★ 4.5</span>
+        <span class="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded-full">★
+          {{ number_format(rand(10, 50) / 10, 1) }}</span>
       </div>
       <h3 class="text-lg font-semibold">{{ Str::limit($activity->title, 10) }}</h3>
       <p class="text-sm text-gray-500">{{ Str::limit($activity->description, 50) }}</p>
       <div class="text-sm text-gray-800 mt-2 font-medium">From ${{ $activity->price }}</div>
       <button class="mt-3 w-full text-center bg-teal-500 text-white py-2 rounded hover:bg-teal-600 transition">
-        Enquire Now
+        Booking
       </button>
     </div>
   </div>
