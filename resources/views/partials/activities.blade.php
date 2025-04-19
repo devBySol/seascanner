@@ -1,4 +1,3 @@
-{{-- Best Holiday Deals --}}
 <h2 class="text-xl font-bold mt-12 px-10">Best holiday deals</h2>
 
 @include('partials.category')
@@ -23,8 +22,18 @@
       <p class="text-sm text-gray-500">{{ Str::limit($activity->description, 50) }}</p>
       <div class="text-sm text-gray-800 mt-2 font-medium">From ${{ $activity->price }}</div>
       <button class="mt-3 w-full text-center bg-teal-500 text-white py-2 rounded hover:bg-teal-600 transition">
-        Booking
+        @if (auth()->check())
+        <a href="{{ route('bookings.create', $activity->id) }}">
+          Book Now
+        </a>
+        @else
+        <a href="/login">
+          Login to Book
+        </a>
+        @endif
+
       </button>
+
     </div>
   </div>
   @endforeach
